@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.androidconcept">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:name=".Notification.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidConcept">
+        <activity android:name=".Reterofit.RetrofitActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <service android:name=".Services.MyService" />
+
+        <activity android:name=".Services.MainActivity"/>
+        <activity
+            android:name=".Drawer.DrawerActivity"
+            android:theme="@style/NoActionBar"/>
+
+        <receiver android:name=".Notification.NotificationActivity$NotificationRecevier" />
+
+        <activity android:name=".Notification.NotificationActivity" />
+        <activity android:name=".ProgressBar__ProgressDialog.progressBar_Concept" />
+        <activity android:name=".TabWithRecylcer.TabLayoutConcept" />
+        <activity android:name=".RecycleView_concept.recycleView_concept" />
+        <activity android:name=".RadioGroup.Radio_Group_concept" />
+        <activity android:name=".Switch.switch_concept" />
+        <activity android:name=".Spinner.SpinnerConcept" />
+        <activity android:name=".Scrollview.ScrollViewConcept" />
+        <activity android:name=".GridView.GridViewConcept" />
+        <activity android:name=".BaseAdapter.ListViewAdapter" />
+        <activity android:name=".BaseAdapter.BaseAdapterConcept" />
+        <activity android:name=".FrameLayout.FrameLayout" />
+        <activity android:name=".TableLayout.TableLayout_concept" />
+        <activity android:name=".RelativeLayout.RelativeLayoutConcept" />
+        <activity android:name=".ConstraintLayout.ConstraintLayoutConcept" />
+        <activity android:name=".LinearLayout.linearLayoutConcept" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>
