@@ -7,6 +7,9 @@ import android.widget.TextView;
 
 import com.example.androidconcept.R;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import retrofit2.Call;
