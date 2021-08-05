@@ -9,6 +9,13 @@ public class Post {
     private int userID;
     private String title;
 
+    public Post(int userID, String title, String text) {
+
+        this.userID = userID;
+        this.title = title;
+        this.text = text;
+    }
+
     @SerializedName("body")  // for identify to the api
     private String text;
 

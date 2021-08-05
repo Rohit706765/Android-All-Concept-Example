@@ -12,14 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcept">
-        <activity android:name=".CardView.CardView"></activity>
-        <activity android:name=".Reterofit.RetrofitActivity">
+        <activity android:name=".FirebaseConcept.FireBase3">
+        </activity>
+      <!--  <activity android:name=".Audio_to_text.VoiceText">
+
+        </activity>-->
+        <activity android:name=".FirebaseConcept.Firebase2Activity"></activity>
+        <activity android:name=".FirebaseConcept.LoginActivity" />
+        <activity android:name=".FirebaseConcept.RegisterACt" />
+        <activity android:name=".FirebaseConcept.FireBaseActivity" >
+
+        </activity>
+        <activity android:name=".CardView.CardView" />
+        <activity android:name=".Reterofit.RetrofitActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- static recevier -->
+        </activity>
+        <!-- static recevier -->
         <!--
   <receiver android:name=".BrodcastRecevier.BrodcastRecevier" android:enabled="true"
             android:exported="true">
