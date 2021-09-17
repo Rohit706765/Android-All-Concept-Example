@@ -3,7 +3,9 @@ package com.example.androidconcept.Reterofit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.androidconcept.R;
 
@@ -27,21 +29,46 @@ public class RetrofitActivity extends AppCompatActivity {
         setContentView(R.layout.activity_retrofit);
         tv_result = findViewById(R.id.tv_text);
 
-        retrofit = new Retrofit.Builder()
+      /*  retrofit = new Retrofit.Builder()
                 .baseUrl("https://jsonplaceholder.typicode.com/")
                 .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        jsonPlaceHolderServices = retrofit.create(JsonPlaceHolderServices.class);
+                .build();*/
 
-        deletePost();
+//        jsonPlaceHolderServices = retrofit.create(JsonPlaceHolderServices.class);
+
+        retrofit = new Retrofit.Builder()
+                .baseUrl("https://api.open-elevation.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        jsonPlaceHolderServices = retrofit.create(JsonPlaceHolderServices.class);
+        String test = 10.0+","+10.0;
+        Call<LocationModel> locationModelCall = jsonPlaceHolderServices.getLocation(test);
+       locationModelCall.enqueue(new Callback<LocationModel>() {
+           @Override
+           public void onResponse(Call<LocationModel> call, Response<LocationModel> response) {
+               if (response.isSuccessful())
+               {
+                   LocationModel models = response.body();
+                   Log.e("tah",response.code()+"code "+" "+models.getLatitude());
+               }
+               Log.v("Error code 400",response.errorBody().toString());
+           }
+
+           @Override
+           public void onFailure(Call<LocationModel> call, Throwable t) {
+               Toast.makeText(RetrofitActivity.this, ""+t.getMessage(), Toast.LENGTH_SHORT).show();
+           }
+       });
+        //        deletePost();
 //        putPost();
 //        patchPost();
 //        createPost();
 //        getComment();
 //        getPost();
     }
-    private void deletePost()
-    {
+
+    private void deletePost() {
         Call<Void> postCall = jsonPlaceHolderServices.deletePost(5);
         postCall.enqueue(new Callback<Void>() {
             @Override
@@ -59,6 +86,7 @@ public class RetrofitActivity extends AppCompatActivity {
             }
         });
     }
+
     private void patchPost() {
         Post post = new Post(15, null, "rohit");
         Call<Post> user = jsonPlaceHolderServices.patchPost(5, post);

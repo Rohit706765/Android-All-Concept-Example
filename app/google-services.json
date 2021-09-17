@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "822376910264",
+    "project_id": "fir-pratice-bf275",
+    "storage_bucket": "fir-pratice-bf275.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822376910264:android:8a0e00c699de4bba05134d",
+        "android_client_info": {
+          "package_name": "com.example.androidconcept"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822376910264-mtbpit13hfa966k3m4rcu6km2ed7dhis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkgJB3CL5eNBLyFI5YKC5dtFly1n870F0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822376910264-mtbpit13hfa966k3m4rcu6km2ed7dhis.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Services.NotificationServiceActivity">
+
+    <EditText
+        android:id="@+id/edtEnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Some Text"
+        android:textColorHint="@color/black" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="startME"
+        android:text="start Service" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="stopME"
+        android:text="stop service" />
+
+</LinearLayout>

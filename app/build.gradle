@@ -44,6 +44,11 @@ android {
 
 dependencies {
 
+    def room_version = "2.3.0"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
     implementation 'androidx.multidex:multidex:2.0.1'
 
 /*    implementation platform('com.google.cloud:libraries-bom:20.9.0')

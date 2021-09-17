@@ -24,6 +24,10 @@ public interface JsonPlaceHolderServices {
 
     //https://jsonplaceholder.typicode.com/comments?postId=1&_Sort=id&_order=des
 
+//    @GET("api/v1/lookup?locations={latitude},{longitude}")
+    @POST("api/v1/lookup")
+    Call<LocationModel> getLocation(@Query("locations")String value);
+
     @GET("posts")
     Call<List<Post>> getlist( @Query("userId")int userId,
                               @Query("_sort")String sort,
