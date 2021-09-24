@@ -14,11 +14,14 @@ import com.example.androidconcept.R;
 import static com.example.androidconcept.Services.AppNotification.CHANNEL_1;
 
 public class NotificationServices extends Service {
+
+    // it call one time
     @Override
     public void onCreate() {
         super.onCreate();
     }
 
+    // it call every  time when notification created
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         String string = intent.getStringExtra("data");
@@ -33,7 +36,9 @@ public class NotificationServices extends Service {
         // dont do your heavy task here because it work on
         // main thread
         startForeground(1,notification);
-        return START_NOT_STICKY;
+        return START_NOT_STICKY;   //START_NOT_STICKY - if service not began every time
+                                // START_STICKY  - it restart service ASAP (but intent is null pass)
+                                // START_REDELIVER_INTENT  - it restart service ASAP (but intent is not null pass)
     }
 
     @Override

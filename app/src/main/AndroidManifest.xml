@@ -13,16 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidConcept">
-        <activity android:name=".Services.NotificationServiceActivity">
+        <activity android:name=".AlarmManager.AlarmActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".RoomDataBase.Excersize2.RoomDataBaseActivity2">
 
         </activity>
+        <activity android:name=".Services.NotificationServiceActivity">
+        </activity>
+        <activity android:name=".RoomDataBase.Excersize2.RoomDataBaseActivity2"></activity>
         <activity android:name=".RoomDataBase.Excersize1.RoomDataBaseActivity" />
         <activity android:name=".AccessFromAssests.AssestAccess" />
         <activity android:name=".FirebaseConcept.FireBase3" />
@@ -73,8 +74,11 @@
         <activity android:name=".ConstraintLayout.ConstraintLayoutConcept" />
         <activity android:name=".LinearLayout.linearLayoutConcept" />
         <activity android:name=".MainActivity" />
-        <!--register the services -->
-        <service android:name=".Services.NotificationServices"/>
+
+        <!-- register the services -->
+        <receiver android:name=".AlarmManager.MyBrodcast"/>
+        <service android:name=".AlarmManager.AlarmService"/>
+        <service android:name=".Services.NotificationServices" />
     </application>
 
 </manifest>
